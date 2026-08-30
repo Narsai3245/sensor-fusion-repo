@@ -2,7 +2,7 @@
 
 Real-time multi-sensor fusion for autonomous collision avoidance, built on a dual-processor embedded platform. Built for ECE4520 Automotive Mechatronics I, Oakland University.
 
-**Team:** Sergio Gamez, Narsai Ibrahim, Connor (Hardware / Electrical)
+**Team:** Sergio Gamez, Narsai Ibrahim, Connor Sitarski
 
 ---
 
