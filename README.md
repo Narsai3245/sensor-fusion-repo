@@ -1,8 +1,8 @@
 # Sensor Fusion Collision Avoidance System
 
-Real-time multi-sensor fusion for autonomous collision avoidance, built on a dual-processor embedded platform. Built for ECE4520 — Automotive Mechatronics I, Oakland University.
+Real-time multi-sensor fusion for autonomous collision avoidance, built on a dual-processor embedded platform. Built for ECE4520 Automotive Mechatronics I, Oakland University.
 
-**Team:** Serg (MCU Firmware) · Narsai Ibrahim (Software / Linux Side) · Connor (Hardware / Electrical)
+**Team:** Sergio Gamez, Narsai Ibrahim, Connor (Hardware / Electrical)
 
 ---
 
@@ -74,7 +74,7 @@ Full results, methodology, and known limitations are documented in [`docs/report
 ## Known Limitations
 
 - The camera's distance-from-bounding-box formula uses a placeholder calibration constant, not yet empirically calibrated across multiple measured distances
-- A Bluetooth manual-drive mode was designed but not completed — the deployed container environment doesn't support the `AF_BLUETOOTH` socket family required for classic RFCOMM communication
+- A Bluetooth manual-drive mode was designed but not completed; the deployed container environment doesn't support the `AF_BLUETOOTH` socket family required for classic RFCOMM communication
 - GPU/NPU-accelerated inference via the board's onboard Adreno GPU was investigated but not pursued, pending confirmation that the required vendor SDK is available on this board's OS image
 
 
