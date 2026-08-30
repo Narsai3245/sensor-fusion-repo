@@ -17,14 +17,14 @@ No single sensor is trusted unconditionally. Each one is weighted by an empirica
 The system runs across the Arduino UNO Q's two onboard processors, connected by its built-in Bridge RPC:
 
 ```
-┌─────────────────────────┐         ┌──────────────────────────────┐
-│   MCU (Zephyr/STM32U585) │         │   Linux Side (Debian/QRB2210) │
-│                          │         │                                │
-│  Sensor polling (50Hz)   │──Bridge→│  Kalman filter fusion          │
-│  Motor arbitration       │←Bridge──│  TTC / alert-level computation │
-│  Safety override logic   │         │  Camera capture + YOLOv5n CV   │
-│  Test button / buzzer    │         │  Flask live dashboard           │
-└─────────────────────────┘         └──────────────────────────────┘
+┌─────────────────────────┐          ┌──────────────────────────────┐
+│   MCU (Zephyr/STM32U585) │         │ Linux Side (Debian/QRB2210) │
+│                          │         │                             | 
+│  Sensor polling (50Hz)   │──Bridge→│ Kalman filter fusion        │
+│  Motor arbitration       │←Bridge──│ TTC / alert-level computation│
+│  Safety override logic   │         │ Camera capture + YOLOv5n CV  │
+│  Test button / buzzer    │         │ Flask live dashboard         │
+└─────────────────────────┘          └──────────────────────────────┘
 ```
 
 The MCU owns the hard real-time path — polling all sensors every 20ms and applying motor output immediately based on the latest safety alert. The Linux side owns everything computationally heavier: sensor fusion math, the camera/CV pipeline, and a live telemetry dashboard.
