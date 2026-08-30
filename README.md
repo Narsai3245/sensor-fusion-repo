@@ -8,7 +8,7 @@ Real-time multi-sensor fusion for autonomous collision avoidance, built on a dua
 
 ## What This Is
 
-A small 4WD RC vehicle that fuses four independent sensors: two ultrasonic rangefinders, an infrared distance sensor, an IMU, and a camera running object detection — into a single Kalman-filtered estimate of obstacle distance and closing velocity. That estimate drives a time-to-collision (TTC) calculation, which governs a tiered, safety-first motor response: normal speed, reduced speed, or full stop.
+A small 4WD RC vehicle that fuses four independent sensors: two ultrasonic rangefinders, an infrared distance sensor, an IMU, and a camera running object detection into a single Kalman-filtered estimate of obstacle distance and closing velocity. That estimate drives a time-to-collision (TTC) calculation, which governs a tiered, safety-first motor response: normal speed, reduced speed, or full stop.
 
 No single sensor is trusted unconditionally. Each one is weighted by an empirically-assigned trust factor in the Kalman filter, the same fusion philosophy used in real automotive ADAS systems, implemented here on real embedded hardware with real electrical and timing constraints.
 
